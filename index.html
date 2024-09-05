@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inicio de Sesión y Registro</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Archivo CSS -->
+    <link href="estilos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5 contenedor-formularios">
+        <!-- Formulario de Inicio de Sesión -->
+        <div id="loginContainer">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm" novalidate>
+                <div class="form-group">
+                    <label for="email-login">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email-login" required>
+                    <div id="error-email-login" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <label for="password-login">Contraseña</label>
+                    <input type="password" class="form-control" id="password-login" required>
+                    <div id="error-password-login" class="error-message"></div>
+                </div>
+                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                <p><a type="button" class="btn btn-link" id="showRegister">¿No tienes cuenta? Regístrate aquí</a></p>
+            </form>
+        </div>
+
+        <!-- Formulario de Registro -->
+        <div id="registerContainer" class="d-none">
+            <h2>Registro de Usuario</h2>
+            <form id="registerForm" novalidate>
+                <div class="form-group">
+                    <label for="nombre-registro">Nombre de Usuario</label>
+                    <input type="text" class="form-control" id="nombre-registro" required>
+                    <div id="error-nombre" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email-registro">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email-registro" required>
+                    <div id="error-email" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <label for="password-registro">Contraseña</label>
+                    <input type="password" class="form-control" id="password-registro" required>
+                    <div id="error-password" class="error-message"></div>
+                </div>
+                <!-- Contenedor para el mensaje de éxito -->
+                <div id="mensaje-exito" class="registro-exitoso"></div>
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+                <p><a type="button" class="btn btn-link" id="showLogin">¿Ya tienes cuenta? Inicia sesión aquí</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Archivo JS -->
+    <script src="scrip.js"></script>
+</body>
+</html>
